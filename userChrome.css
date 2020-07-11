@@ -1,0 +1,375 @@
+@import "_variables.css";
+
+/* Centers bookmarks in the bookmark toolbar */
+#PlacesToolbarItems {
+  -moz-box-pack: center;
+}
+
+/* Changes the color of the space to the right of open tabs */
+#tabbrowser-tabs {
+  background-color: none !important;
+}
+
+/* Changes the color of the star button on websites you can bookmark */
+#star-button {
+  fill: var(--horizon-accent-color) !important;
+}
+
+/* Disables the blue flash when a tab loads */
+.tabbrowser-tab .tab-loading-burst {
+  display: none !important;
+}
+
+/* Changes the color behind of traffic light buttons (mac) */
+toolbar#TabsToolbar {
+  -moz-appearance: none !important;
+  background-color: var(--horizon-background) !important;
+}
+
+/* Gets rid of the space on the top of the window that's not taken up by tabs */
+.titlebar-spacer[type="pre-tabs"],
+.titlebar-spacer[type="post-tabs"] {
+  display: none !important;
+  width: 0px !important;
+  max-width: 0px !important;
+}
+
+/* Changes the text color when you type something into the url bar. If someone knows how to fix the blue text, please let me know */
+#urlbar {
+  box-shadow: none !important;
+  background-color: var(--horizon-accent-color) !important;
+  background: var(--horizon-background) !important;
+  border: none !important;
+  color: var(--horizon-accent-color) !important;
+  font-weight: bold !important;
+  font-family: var(--horizon-font) !important;
+}
+
+/* Prevent enlargement */
+#urlbar[breakout-extend] {
+  top: calc(
+    (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
+  ) !important;
+  left: 0 !important;
+  width: 100% !important;
+}
+
+#urlbar[breakout-extend] #urlbar-input-container {
+  height: var(--urlbar-height) !important;
+  /*padding: 0px !important;*/
+  padding-block: 0px !important;
+  padding-inline: 0px !important;
+}
+
+.urlbarView-row {
+  padding: 0px 2px 0px 2px;
+}
+
+/* Removes the faint line above the url bar */
+#nav-bar {
+  box-shadow: none !important;
+  border-top: none !important;
+}
+
+/* Changes the new tab favicon */
+.tabbrowser-tab[label^="New Tab"] .tab-icon-image {
+  list-style-image: none !important;
+  width: 0 !important;
+  padding-left: 16px !important;
+  background: url("firefox_halo_with_paw_48.png") !important;
+  background-size: 16px 16px !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Changes the new private tab favicon */
+.tabbrowser-tab[label^="Private Browsing"] .tab-icon-image {
+  list-style-image: none !important;
+  width: 0 !important;
+  padding-left: 16px !important;
+  background: url("firefox_halo_with_paw_private_favicon.png") !important;
+  background-size: 16px 16px !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Changes the color of the bookmarks toolbar */
+#PersonalToolbar {
+  background-color: var(--horizon-background) !important;
+  color: var(--horizon-accent-color) !important;
+}
+
+/* Changes the color of the bookmark stars */
+.urlbarView-row[type="bookmark"]
+  > .urlbarView-row-inner
+  > .urlbarView-no-wrap
+  > .urlbarView-type-icon {
+  fill: var(--horizon-accent-color) !important;
+}
+
+/* This makes it so that on start-up the screen doesn't flash */
+#browser vbox#appcontent tabbrowser,
+#content,
+#tabbrowser-tabpanels,
+browser[type="content-primary"],
+browser[type="content"] > html {
+  background: var(--horizon-background) !important;
+}
+
+/* Removes weird line between the stacks and profile */
+#PanelUI-button {
+  border: none !important;
+  margin-inline-start: 0px !important;
+  padding-inline-start: 0px !important;
+}
+
+/* This mess makes it so that there's no hover over the toolbar icons */
+.urlbar-icon,
+.urlbar-icon-wrapper,
+#tabbrowser-tabs toolbarbutton,
+toolbar toolbarbutton > .toolbarbutton-icon,
+toolbar toolbarbutton > .toolbarbutton-badge-stack,
+.titlebar-button,
+#identity-box,
+#tracking-protection-icon-container,
+.findbar-textbox ~ toolbarbutton,
+toolbarbutton.scrollbutton-up,
+toolbarbutton.scrollbutton-down {
+  background-color: transparent !important;
+}
+
+/* Removes the border below the bookmarks toolbar */
+#navigator-toolbox {
+  border: none !important;
+}
+
+/* Changes the colors in the URL bar */
+#urlbar-background {
+  background-color: var(--horizon-background) !important;
+  border-color: var(--horizon-accent-color) !important;
+}
+#urlbar-input-container {
+  color: var(--horizon-accent-color) !important;
+}
+#urlbar {
+  background-color: var(--horizon-background) !important;
+}
+
+/* Removes the line between tabs */
+.tabbrowser-tab::before,
+.tabbrowser-tab::after {
+  display: none !important;
+}
+
+/* Changes the tab topline color */
+.tabbrowser-tab {
+  --tab-line-color: var(--horizon-accent-color) !important;
+  color: var(--horizon-accent-color) !important;
+  font-family: var(--horizon-font) !important;
+}
+
+/* Changes the colors of the area behind the tabs */
+#tabbrowser-tabs {
+  background-color: var(--horizon-background) !important;
+}
+
+/* Changes toolbar button colors */
+.toolbarbutton-1 {
+  fill: var(--horizon-accent-color) !important;
+  background-color: var(--horizon-background) !important;
+}
+
+/* This block makes the tabs seamless with the rest of the config's color */
+tab {
+  height: 3rem;
+  background-color: var(--horizon-background) !important;
+  font-weight: thin !important;
+  color: var(--horizon-accent-color) !important;
+}
+
+.tab-content[selected="true"] {
+  background-color: var(--horizon-background) !important;
+  font-weight: bold !important;
+  color: var(--horizon-accent-color) !important;
+}
+
+#nav-bar-customization-target {
+  background-color: var(--horizon-accent-color) !important;
+}
+/* ENDBLOCK */
+
+/* Changes the color of the empty area around the nav bar */
+#nav-bar-customization-target {
+  background-color: var(--horizon-background) !important;
+}
+
+.PanelUI-subView,
+.panel-subview-body {
+  --newtab-search-icon-color: var(--horizon-accent-color);
+  --arrowpanel-background: none !important;
+  --arrowpanel-color: var(--horizon-accent-color) !important;
+  --lwt-accent-color: rgb(12, 12, 13);
+  --lwt-text-color: var(--horizon-accent-color) !important;
+  color: var(--horizon-accent-color) !important;
+  background-color: var(--horizon-background) !important;
+}
+
+#personal-bookmarks .bookmark-item > .toolbarbutton-text {
+  /* text-color: var(--horizon-accent-color)!important; */
+  color: var(--horizon-accent-color) !important;
+  background-color: var(--horizon-background) !important;
+}
+
+/* Hides the private browsing indicator */
+.private-browsing-indicator {
+  display: none !important;
+}
+
+/* Right Click Menu */
+#toolbar-context-menu,
+#tabContextMenu,
+#contentAreaContextMenu,
+#back-button > menupopup,
+#forward-button > menupopup,
+#backForwardMenu,
+#placesContext,
+#viewButton > menupopup,
+#pageActionContextMenu,
+#toolbar-context-menu menupopup,
+#tabContextMenu menupopup,
+#contentAreaContextMenu menupopup,
+#back-button > menupopup menupopup,
+#forward-button > menupopup menupopup,
+#backForwardMenu menupopup,
+#toolbar-context-menu menupopup,
+#placesContext menupopup,
+#viewButton > menupopup menupopup,
+#pageActionContextMenu menupopup {
+  -moz-appearance: none !important;
+  background-color: var(--horizon-background) !important;
+  border: 1px #303030 solid !important;
+  margin: 1px 0 0 0 !important;
+}
+
+#toolbar-context-menu menuseparator,
+#tabContextMenu menuseparator,
+#contentAreaContextMenu menuseparator,
+#back-button > menupopup menuseparator,
+#forward-button > menupopup menuseparator,
+#backForwardMenu menuseparator,
+#toolbar-context-menu menuseparator,
+#placesContext menuseparator,
+#viewButton > menupopup menuseparator,
+#pageActionContextMenu menuseparator {
+  -moz-appearance: none !important;
+  max-height: 1px !important;
+  border: #303030 !important;
+  padding: 0.5px 0 !important;
+  background-color: #303030 !important;
+}
+
+#toolbar-context-menu menuitem,
+#tabContextMenu menuitem,
+#contentAreaContextMenu menuitem,
+#back-button > menupopup menuitem,
+#forward-button > menupopup menuitem,
+#backForwardMenu menuitem,
+#toolbar-context-menu menuitem,
+#placesContext menuitem,
+#viewButton > menupopup menuitem,
+#pageActionContextMenu menuitem,
+#toolbar-context-menu menu,
+#tabContextMenu menu,
+#contentAreaContextMenu menu,
+#back-button > menupopup menu,
+#forward-button > menupopup menu,
+#backForwardMenu menu,
+#toolbar-context-menu menu,
+#placesContext menu,
+#viewButton > menupopup menu,
+#pageActionContextMenu menu {
+  -moz-appearance: none !important;
+  color: var(--horizon-accent-color) !important;
+  padding: 0 4px 2px 4px !important;
+  min-height: 30px !important;
+}
+
+#toolbar-context-menu menugroup,
+#tabContextMenu menugroup,
+#contentAreaContextMenu menugroup,
+#back-button > menupopup menugroup,
+#forward-button > menupopup menugroup,
+#backForwardMenu menugroup,
+#toolbar-context-menu menugroup,
+#placesContext menugroup,
+#viewButton > menupopup menugroup,
+#pageActionContextMenu menugroup {
+  padding: 0 !important;
+  background-color: transparent !important;
+}
+
+#toolbar-context-menu .menu-right,
+#tabContextMenu .menu-right,
+#contentAreaContextMenu .menu-right,
+#back-button > menupopup .menu-right,
+#forward-button > menupopup .menu-right,
+#backForwardMenu .menu-right,
+#toolbar-context-menu .menu-right,
+#placesContext .menu-right,
+#viewButton > menupopup .menu-right,
+#pageActionContextMenu .menu-right {
+  -moz-appearance: none !important;
+  padding: 7px !important;
+  margin-right: 6px !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg) scale(0.35);
+}
+
+menuitem[disabled="true"],
+menuitem[disabled="true"] > .menu-text {
+  color: #8a8a8a !important;
+}
+
+#toolbar-context-menu menuitem:hover,
+#tabContextMenu menuitem:hover,
+#contentAreaContextMenu menuitem:hover,
+#back-button > menupopup menuitem:hover,
+#forward-button > menupopup menuitem:hover,
+#backForwardMenu menuitem:hover,
+#toolbar-context-menu menuitem:hover,
+#placesContext menuitem:hover,
+#viewButton > menupopup menuitem:hover,
+#pageActionContextMenu menuitem:hover,
+#toolbar-context-menu menu:hover,
+#tabContextMenu menu:hover,
+#contentAreaContextMenu menu:hover,
+#back-button > menupopup menu:hover,
+#forward-button > menupopup menu:hover,
+#backForwardMenu menu:hover,
+#toolbar-context-menu menu:hover,
+#placesContext menu:hover,
+#viewButton > menupopup menu:hover,
+#pageActionContextMenu menu:hover,
+#toolbar-context-menu menuitem[_moz-menuactive="true"],
+#tabContextMenu menuitem[_moz-menuactive="true"],
+#contentAreaContextMenu menuitem[_moz-menuactive="true"],
+#back-button > menupopup menuitem[_moz-menuactive="true"],
+#forward-button > menupopup menuitem[_moz-menuactive="true"],
+#backForwardMenu menuitem[_moz-menuactive="true"],
+#toolbar-context-menu menuitem[_moz-menuactive="true"],
+#placesContext menuitem[_moz-menuactive="true"],
+#viewButton > menupopup menuitem[_moz-menuactive="true"],
+#pageActionContextMenu menuitem[_moz-menuactive="true"],
+#toolbar-context-menu menu[_moz-menuactive="true"],
+#tabContextMenu menu[_moz-menuactive="true"],
+#contentAreaContextMenu menu[_moz-menuactive="true"],
+#back-button > menupopup menu[_moz-menuactive="true"],
+#forward-button > menupopup menu[_moz-menuactive="true"],
+#backForwardMenu menu[_moz-menuactive="true"],
+#toolbar-context-menu menu[_moz-menuactive="true"],
+#placesContext menu[_moz-menuactive="true"],
+#viewButton > menupopup menu[_moz-menuactive="true"],
+#pageActionContextMenu menu[_moz-menuactive="true"] {
+  -moz-appearance: none !important;
+  background-color: var(--horizon-background) !important;
+}
